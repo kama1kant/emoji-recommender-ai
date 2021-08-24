@@ -1,27 +1,14 @@
-import streamlit as st
 import re
 import os
 import numpy as np
 import pandas as pd
 import re
-from tqdm.auto import tqdm
-from datasets import load_dataset
-from datasets import load_metric
 import torch
-from torch.utils.data import DataLoader
 from transformers import AutoTokenizer
-from transformers import AutoModelForSequenceClassification
-from transformers import TrainingArguments
-from transformers import Trainer
 from transformers import AutoModel
-from transformers import AutoModelForSequenceClassification
-from transformers import AdamW
-from transformers import get_scheduler
-from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
-
 
 class EmojiRecommender:
     def __init__(self):
